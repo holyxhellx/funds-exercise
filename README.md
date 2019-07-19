@@ -11,7 +11,7 @@ How can we solve this problem using traditional techniques?
 
 ### Solving the problem with a Solidity smart contract
 
-1. Open [Remix IDE] (https://remix.ethereum.org/);
+1. Open [Remix IDE](https://remix.ethereum.org/);
 2. Create a new file Funds.sol and paste into it the script contained in this repository;
 3. Compile Funds.sol;
 4. Deploy Funds.sol;
@@ -29,4 +29,4 @@ Now try using the Ropsten public test network!
 13. Repeat the process from step 4;
 
 Note that in this case the signatures and the names will be written **permanently** on the Ropsten public test network.
-Students are encouraged to use [Etherscan] (https://ropsten.etherscan.io/) to interact with the same instance of the smart contract, as it would be in a real scenario.
+Students are encouraged to use [Etherscan](https://ropsten.etherscan.io/) to interact with the same instance of the smart contract, as it would be in a real scenario.
