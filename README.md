@@ -28,5 +28,5 @@ Now try using the Ropsten public test network!
 12. As a Remix IDE environment select Injected Web3, so as to interact with Ropsten;
 13. Repeat the process from step 4;
 
-Note that in this case the signatures and the names will be written ** permanently ** on the Ropsten public test network.
+Note that in this case the signatures and the names will be written **permanently** on the Ropsten public test network.
 Students are encouraged to use [Etherscan] (https://ropsten.etherscan.io/) to interact with the same instance of the smart contract, as it would be in a real scenario.
