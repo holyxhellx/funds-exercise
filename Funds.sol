@@ -13,11 +13,15 @@ contract Funds { // Name of the contract
     
     // Says if an address has already been used to sign the contract
     mapping(address => bool) address_previously_used;
+    
+    // Allows to define permissions to call functions
+    modifier isOwner(bool expectedStatus, string memory error) {
+        require(address_previously_used[msg.sender] == expectedStatus, error);
+        _;
+    }
 
     // Allows to sign the contract
-    function writeSignature(string memory _name) public {
-        // The address must not have been already used to sing the contract
-        require(address_previously_used[msg.sender] == false);
+    function writeSignature(string memory _name) public isOwner(false, "An address can be used only once to sign the contract.") {
         signatures.push(Signature(_name, msg.sender));
         address_previously_used[msg.sender] = true;
     }
@@ -36,12 +40,15 @@ contract Funds { // Name of the contract
     }
     
     // Allows to withdraw funds from smart contract
-    function withdrawFunds() external {
-        // The address must have been used to sing the contract
-        require(address_previously_used[msg.sender] == true);
+    function withdrawFunds() external isOwner(true, "An address must have been used to sign the contract to withdraw funds.") {
         // At least 3 signatures have to be available
         require(signatures.length >= 3);
         msg.sender.transfer(address(this).balance);
+    }
+    
+    // Returns smart contract balance in Ether 
+    function getBalance() public view returns(uint256) {
+        return address(this).balance / (1 ether);
     }
     
     // Allows to deposit funds into the contract
