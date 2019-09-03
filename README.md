@@ -22,7 +22,7 @@ How can we solve this problem using traditional techniques?
 
 Now try using the Ropsten public test network!
 
-9. Install Metamask and follow the wizard;
+9. Install [Metamask](https://metamask.io/) and follow the wizard;
 10. Connect to the Ropsten network;
 11. Withdraw funds for free from the Ropsten faucet;
 12. As a Remix IDE environment select Injected Web3, so as to interact with Ropsten;
