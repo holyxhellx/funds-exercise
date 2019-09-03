@@ -41,8 +41,8 @@ contract Funds { // Name of the contract
     
     // Allows to withdraw funds from smart contract
     function withdrawFunds() external isOwner(true, "An address must have been used to sign the contract to withdraw funds.") {
-        // At least 3 signatures have to be available
-        require(signatures.length >= 3);
+        // At least 2 signatures have to be available
+        require(signatures.length >= 2);
         msg.sender.transfer(address(this).balance);
     }
     
