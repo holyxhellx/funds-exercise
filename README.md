@@ -20,7 +20,7 @@ How can we solve this problem using traditional techniques?
 7. Sign (writeSignature()) the contract at least 2 times using distinct addresses and by providing names;
 8. Withdraw (withdrawFunds()) the funds from the smart contract using one of the addresses used for signatures;
 
-Now try using the Ropsten public test network!
+Now try using the Ropsten public test network (team up with someone else)!
 
 9. Install [Metamask](https://metamask.io/) and follow the wizard;
 10. Connect to the Ropsten network;
