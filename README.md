@@ -30,3 +30,14 @@ Now try using the Ropsten public test network!
 
 Note that in this case the signatures and the names will be written **permanently** on the Ropsten public test network.
 Students are encouraged to use [Etherscan](https://ropsten.etherscan.io/) to interact with the same instance of the smart contract, as it would be in a real scenario.
+
+### Optional part
+
+10. Modify the code to require sending a positive amount of Ether to the contract to sign it;
+
+```solidity
+function withdrawFunds() external payable isOwner(true, "An address must have been used to sign the contract to withdraw funds.") {
+  require(msg.value > 0, "A positive amount of Ether is required to sing the contract.");
+  ...
+}
+```
