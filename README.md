@@ -33,11 +33,9 @@ Students are encouraged to use [Etherscan](https://ropsten.etherscan.io/) to int
 
 ### Optional part
 
-10. Modify the code to require sending a positive amount of Ether to the contract to sign it;
+10. Modify the code to require sending a positive amount of Ether to the contract to sign it (line 43);
 
 ```solidity
 function withdrawFunds() external payable isOwner(true, "An address must have been used to sign the contract to withdraw funds.") {
   require(msg.value > 0, "A positive amount of Ether is required to sing the contract.");
-  ...
-}
 ```
