@@ -16,7 +16,7 @@ How can we solve this problem using traditional techniques?
 3. Compile Funds.sol;
 4. Deploy Funds.sol;
 5. Deposit the funds into the smart contract by invoking the fallback function;
-6. Try to withdraw (withdrawFunds ()) the smart contract funds;
+6. Try to withdraw (withdrawFunds ()) the smart contract funds. It will not be possible since nobody signed the contract;
 7. Sign (writeSignature()) the contract at least 3 times using distinct addresses and by providing names;
 8. Withdraw (withdrawFunds()) the funds from the smart contract using one of the addresses used for signatures;
 
