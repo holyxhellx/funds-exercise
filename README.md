@@ -15,7 +15,7 @@ How can we solve this problem using traditional techniques?
 2. Create a new file Funds.sol and paste into it the script contained in this repository;
 3. Compile Funds.sol;
 4. Deploy Funds.sol;
-5. Deposit the funds into the smart contract by invoking the fallback function;
+5. Deposit funds (for example, 1 Ether) into the smart contract by invoking the fallback function;
 6. Try to withdraw (withdrawFunds ()) the smart contract funds. It will not be possible since nobody signed the contract;
 7. Sign (writeSignature()) the contract at least 2 times using distinct addresses and by providing names;
 8. Withdraw (withdrawFunds()) the funds from the smart contract using one of the addresses used for signatures;
@@ -26,18 +26,22 @@ Now try using the Ropsten public test network (team up with someone else)!
 10. Connect to the Ropsten network;
 11. Withdraw funds for free from the Ropsten faucet;
 12. As a Remix IDE environment select Injected Web3, so as to interact with Ropsten;
-13. Repeat the process from step 4;
+13. (Only one of you) deploy Funds.sol;
+14. (The other person) invoke (at address) Funds.sol from both instances of Remix IDE using the smart contract address;
+15. Deposit funds (for example, 1 Ether) into the smart contract by invoking the fallback function;
+16. Sign (writeSignature()) the contract at least 2 times using distinct addresses and by providing names;
+17. Withdraw (withdrawFunds()) the funds from the smart contract using one of the addresses used for signatures;
 
 Note that in this case the signatures and the names will be written **permanently** on the Ropsten public test network.
 Students are encouraged to use [Etherscan](https://ropsten.etherscan.io/) to interact with the same instance of the smart contract, as it would be in a real scenario.
 
 ### Optional part (working on your own)
 
-14. Modify the code to require sending a positive amount of Ether to the contract to sign it (replace line 43 of the code with the code below);
+18. Modify the code to require sending a positive amount of Ether to the contract to sign it (replace line 43 of the code with the code below);
 
 ```solidity
 function withdrawFunds() external payable isOwner(true, "An address must have been used to sign the contract to withdraw funds.") {
   require(msg.value > 0, "A positive amount of Ether is required to sing the contract.");
 ```
 
-15. Repeat the process from step 3, taking into consideration the new rule;
+19. Repeat the process from step 3, taking into consideration the new rule;
