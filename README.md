@@ -37,7 +37,7 @@ Students may use also [Etherscan](https://ropsten.etherscan.io/) to interact wit
 
 ### Optional part (working on your own)
 
-18. Modify the code to require sending a positive amount of Ether to the contract to sign it (replace line 43 of the code with the code below);
+18. Modify the code to require sending a positive amount of Ether to the contract to sign it (replace line 24 of the code with the code below);
 
 ```solidity
  function writeSignature(string memory _name) public payable isOwner(false, "An address can be used only once to sign the contract.") {
