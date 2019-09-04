@@ -33,7 +33,7 @@ Now try using the Ropsten public test network (team up with someone else)!
 17. Withdraw (withdrawFunds()) the funds from the smart contract using one of the addresses used for signatures;
 
 Note that in this case the signatures and the names will be written **permanently** on the Ropsten public test network.
-Students are encouraged to use [Etherscan](https://ropsten.etherscan.io/) to interact with the same instance of the smart contract, as it would be in a real scenario.
+Students may use also [Etherscan](https://ropsten.etherscan.io/) to interact with the the smart contract.
 
 ### Optional part (working on your own)
 
