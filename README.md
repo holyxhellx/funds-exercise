@@ -40,7 +40,7 @@ Students may use also [Etherscan](https://ropsten.etherscan.io/) to interact wit
 18. Modify the code to require sending a positive amount of Ether to the contract to sign it (replace line 43 of the code with the code below);
 
 ```solidity
-function withdrawFunds() external payable isOwner(true, "An address must have been used to sign the contract to withdraw funds.") {
+ function writeSignature(string memory _name) public payable isOwner(false, "An address can be used only once to sign the contract.") {
   require(msg.value > 0, "A positive amount of Ether is required to sing the contract.");
 ```
 
