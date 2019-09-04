@@ -46,9 +46,9 @@ contract Funds { // Name of the contract
         msg.sender.transfer(address(this).balance);
     }
     
-    // Returns smart contract balance in Ether 
+    // Returns smart contract balance in Wei (1/10^18 Ether) 
     function getBalance() public view returns(uint256) {
-        return address(this).balance / (1 ether);
+        return address(this).balance;
     }
     
     // Allows to deposit funds into the contract
