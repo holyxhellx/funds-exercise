@@ -27,7 +27,7 @@ Now try using the Ropsten public test network (team up with someone else)!
 11. Withdraw funds for free from the Ropsten faucet;
 12. As a Remix IDE environment select Injected Web3, so as to interact with Ropsten;
 13. (Only one of you) deploy Funds.sol;
-14. (The other person) invoke (at address) Funds.sol from both instances of Remix IDE using the smart contract address;
+14. (The other person) invoke (at address) Funds.sol from the other instance of Remix IDE using the smart contract address;
 15. Deposit funds (for example, 1 Ether) into the smart contract by invoking the fallback function;
 16. Sign (writeSignature()) the contract at least 2 times using distinct addresses and by providing names;
 17. Withdraw (withdrawFunds()) the funds from the smart contract using one of the addresses used for signatures;
